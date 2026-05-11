@@ -16,7 +16,7 @@ export function FeaturesSection() {
   const handleDownload = () => {
     // Download the real PDF from public/assets
     const link = document.createElement('a');
-    link.href = '/personal-portfolio/assets/resume-pantallano.pdf';
+    link.href = `${import.meta.env.BASE_URL}assets/resume-pantallano.pdf`;
     link.download = 'resume-pantallano.pdf';
     document.body.appendChild(link);
     link.click();
