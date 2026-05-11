@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://F4UST-03.github.io/personal-portfolio/",
+  "homepage": "https://F4UST-03.github.io/portfolio-pantallano/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
