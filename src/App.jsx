@@ -45,18 +45,27 @@ export function FeaturesSection() {
         <div className="feature-content">
           <div className={`content-panel ${activeTab === 'personal-info' ? 'active' : ''}`} id="personal-info">
             <h3>My Personal Info</h3>
-            <img src="assets/my-pic.jpg" alt="my-picture" className='my-pic'/>
-            <ul className="feature-list">
-              <li><strong>Name: </strong>Jorilyn Pantallano</li>
-              <li><strong>Age: </strong>22</li>
-              <li><strong>Birthyear: </strong>2003</li>
-              <li><strong>Address: </strong>Apalit, Pampanga</li>
-              <li><strong>Hometown: </strong> <br />
-              Rodriguez, Rizal <br />
-              Sipalay, Negros Occidental <br />
-              Puerto Princesa, Palawan
-              </li>
-            </ul>
+            <div className='pic-container'>
+              <div className='personal-info'>
+                <ul className="feature-list">
+                  <li><strong>Name: </strong>Jorilyn Pantallano</li>
+                  <li><strong>Age: </strong>22</li>
+                  <li><strong>Birthyear: </strong>2003</li>
+                  <li><strong>Address: </strong>Apalit, Pampanga</li>
+                  <li><strong>Hometown: </strong> <br />
+                  Rodriguez, Rizal <br />
+                  Sipalay, Negros Occidental <br />
+                  Puerto Princesa, Palawan
+                  </li>
+                </ul>
+              </div>
+              
+
+            <div className="pic-wrapper">
+                <img src="assets/my-pic.png" alt="my-picture" className='my-pic'/>
+                <span className="my-pic-line"></span>
+              </div>
+            </div>
           </div>
 
           <div className={`content-panel ${activeTab === 'education' ? 'active' : ''}`} id="education">
@@ -64,13 +73,17 @@ export function FeaturesSection() {
             <ul className="feature-list">
               <li><strong>High School: </strong>Kasiglahan Village National High School, Rizal</li>
               <li><strong>Senior High School: </strong>Southville 8B Senior High School (HUMSS), Rizal</li>
-              <li><strong>Undergraduate: </strong>La Verdad Christian College (Bachelor of Science in Information Systems), Pampanga</li>
+              <li><strong>College: </strong><br />
+              La Verdad Christian College (Bachelor of Science in Information Systems, 2025-ongoing), Apalit Pampanga <br />
+              La Verdad Christian College (Associate in Computer Technology, 2023-2025), Apalit Pampanga
+              </li>
               <li><strong>Certifications: </strong> <br />
               Graduated w/ Honor (SHS) <br />
               Dean's Lister (1st year College) <br />
               President's Lister (2nd year College) <br />
               English Academic Vocabulary Professional Certification AVPC (MTF Institute) <br />
-              Improve Business Performance with Google Forms (Google)
+              Improve Business Performance with Google Forms (Google) <br />
+              IRCITE IT Marketing Challenge Certification (La Verdad Christian College) <br />
               </li>
             </ul>
           </div>
@@ -81,40 +94,60 @@ export function FeaturesSection() {
               <li>Listening to Music</li>
               <li>Singing</li>
               <li>Dancing</li>
-              <li>Psychology</li>
-              <li>Debugging</li>
+              <li>Psychology (observing behaviors)</li>
+              <li>Debugging (visual outputs)</li>
               <li>Watching Anime & Memes</li>
-              <li>Playing Adventure Games</li>
+              <li>Reading Visual Novels</li>
             </ul>
           </div>
 
           <div className={`content-panel ${activeTab === 'skills' ? 'active' : ''}`} id="skills">
             <h3>My Skills</h3>
             <ul className="feature-list">
-              <li>Performing Arts (9/10)</li>
+              <li>Performing Arts (8/10)</li>
               <li>Behavioral Observation (9/10)</li>
               <li>Backend Development (7/10)</li>
-              <li>Frontend Development (6/10)</li>
-              <li>Listening & Decision making (9/10)</li>
+              <li>Frontend Development (8/10)</li>
+              <li>Listening & Decision making (8/10)</li>
               <li>UI/UX Designing & Prototyping (8/10)</li>
+              <li>Software Testing (7/10)</li>
+              <li><strong>Languages: </strong>Filipino, English, Bisaya</li>
             </ul>
           </div>
 
           <div className={`content-panel ${activeTab === 'tech-stacks' ? 'active' : ''}`} id="tech-stacks">
             <h3>Tools & Tech Stacks</h3>
             <ul className="feature-list">
-              <li>Python</li>
-              <li>C#</li>
-              <li>Php, Laravel</li>
-              <li>HTML5, CSS</li>
-              <li>React</li>
-              <li>JavaScript</li>
-              <li>MySQL</li>
-              <li>Git, GitHub</li>
-              <li>Figma</li>
-              <li>Microsoft Office</li>
-              <li>OBS Studio</li>
-              <li>Canva</li>
+              <div className='tech-stacks'>
+                <div>
+                  <li><strong>Backend: </strong><br />
+                  Python <br /> Php <br /> MySQL <br /> MariaDB <br /> Convex
+                  </li>
+
+                  <li><strong>Frontend: </strong> <br />
+                  HTML5 <br /> React <br /> CSS3 <br /> JavaScript <br /> TypeScript
+                  </li>
+
+                  <li><strong>Frameworks/Libraries: </strong><br />
+                  React <br /> Laravel <br />  Vite <br /> NPM  
+                  </li>
+
+                  <li><strong>Mobile: </strong><br />
+                  Expo <br />Expo Go <br /> React Native
+                  </li>
+                </div>
+                
+                <div>
+                  <li><strong>Version Control: </strong><br />
+                  Git <br /> GitHub
+                  </li>
+
+                  <li><strong>Other Tools: </strong><br />
+                  Visual Studio Code <br /> PhpMyAdmin <br /> XAMPP <br /> Apache <br /> Figma <br /> Microsoft Office <br /> Google Workspace <br />
+                  Canva <br /> Jira <br /> EmailJS <br /> Vercel <br /> Draw.io <br /> Powershell <br /> Command Prompt <br /> OBS Studio
+                  </li>
+                </div>
+              </div> 
             </ul>
           </div>
 
@@ -134,9 +167,11 @@ export function FeaturesSection() {
 
 export function TextRotator() {
   const texts = [
-    { id: 0, label: 'TECH ENTHUSIAST' },
-    { id: 1, label: 'MUSIC LOVER' },
-    { id: 2, label: 'ELECTRIC DREAMER' },
+    { id: 0, label: 'INFORMATION SYSTEMS STUDENT' },
+    { id: 1, label: 'WEB & MOBILE DEVELOPMENT ' },
+    { id: 2, label: 'UI/UX DESIGN' },
+    { id: 3, label: 'TECHNOLOGY QUALITY ASSURANCEN' },
+    { id: 4, label: 'DIGITAL INNOVATION' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
