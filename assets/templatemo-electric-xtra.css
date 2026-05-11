@@ -27,13 +27,67 @@ https://templatemo.com/tm-596-electric-xtra
             font-size: large;
         }
 
-        .my-pic {
-            width: 30%;
-            height: auto;
-            border-radius: 20%;
-            float: right;
-            margin-left: 20px;
+.pic-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
         }
+
+        .pic-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            width: 40%;
+        }
+
+
+        .my-pic {
+            width: 80%;
+            height: auto;
+            margin-right: 100px;
+            margin-top: -10px;
+        }
+
+        /* ensure the line stays aligned under the right-side picture */
+        .my-pic-line{
+          margin-top: 0;
+          margin-bottom: 18px;
+          margin-right: 100px;
+        }
+
+
+        .my-pic-line{
+            /* display:block; */
+            width: 350px;
+            height: 3px;
+            border-radius: 888px;
+            background: linear-gradient(90deg, rgba(255,94,0,0.0), rgb(42, 42, 41), rgb(42, 42, 41), rgba(0,178,255,0.0));
+            position: relative;
+            }
+
+            .my-pic-line::before{
+            content:"";
+            position:absolute;
+            inset: -4px 0;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(255,94,0,0.0), rgba(23, 23, 22, 0.85), rgba(23, 23, 22, 0.85), rgba(0,178,255,0.0));
+            filter: blur(6px);
+            opacity: 0.9;
+            }
+
+            .tech-stacks {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            }
+
+            @media (max-width: 480px){
+            .my-pic-line{ width: 120px; height: 5px; }
+            }
 
         .pep {
             width: 95%;
@@ -701,6 +755,10 @@ https://templatemo.com/tm-596-electric-xtra
             padding: 40px;
             backdrop-filter: blur(10px);
             min-height: 502px;
+        }
+
+        .personal-info {
+            margin-top: -10px;
         }
 
         .content-panel {
