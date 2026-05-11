@@ -70,8 +70,8 @@ https://templatemo.com/tm-596-electric-xtra
             }
 
             .my-pic-line::before{
-            content:"";
-            position:absolute;
+            content: "";
+            position: absolute;
             inset: -4px 0;
             border-radius: 999px;
             background: linear-gradient(90deg, rgba(255,94,0,0.0), rgba(23, 23, 22, 0.85), rgba(23, 23, 22, 0.85), rgba(0,178,255,0.0));
@@ -91,7 +91,7 @@ https://templatemo.com/tm-596-electric-xtra
 
         .pep {
             width: 95%;
-            height: 300px;
+            height: auto;
             border-radius: 2px;
             margin-top: 20px;
         }
@@ -105,14 +105,14 @@ https://templatemo.com/tm-596-electric-xtra
         }
 
         .breed1 {
-            width: 85%;
-            height: 260px;
+            width: 80%;
+            height: auto;
             border-radius: 2px;
             margin-top: 20px;
         }
         .breed2 {
-            width: 85%;
-            height: 350px;
+            width: 80%;
+            height: auto;
             border-radius: 2px;
             margin-top: 20px;
             margin-left: 70px;
